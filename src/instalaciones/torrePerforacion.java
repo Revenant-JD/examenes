@@ -18,11 +18,12 @@ public class torrePerforacion extends InstalacionesPetroliferas  implements Revi
 
     // METODOS
     @Override
-    public void calculoProduccionReal() {
+    public double calculoProduccionReal() {
        produccionReal= produccionDiaria + (profundidadPerforacion/90)+(Math.sqrt(profundidadPerforacion));
         if (produccionReal < 0 ){
             produccionReal=0;
         }
+        return produccionReal;
     }
 
     @Override

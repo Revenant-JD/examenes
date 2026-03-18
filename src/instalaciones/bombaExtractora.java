@@ -25,11 +25,12 @@ public class bombaExtractora extends InstalacionesPetroliferas{
     }
 
     @Override
-    public void calculoProduccionReal() {
+    public double calculoProduccionReal() {
         produccionReal=produccionDiaria + (ciclosMin*4)-(ciclosMin/2);
         if (produccionReal < 0){
             produccionReal=0;
         }
+        return  produccionReal;
     }
     @Override
     public void mostrarResultado() {

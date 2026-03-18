@@ -17,9 +17,11 @@ public abstract class InstalacionesPetroliferas {
 
        System.out.println("INSTALACION DEFECTO");
    }
-   public void calculoProduccionReal(){
+   public double calculoProduccionReal(){
        System.out.println("PRODUCCION POR DEFECTO");
+       return produccionDiaria;
    }
+
     public   void  mostrarResultado(){
         System.out.println("RESULTADO POR DEFECTO");
     }

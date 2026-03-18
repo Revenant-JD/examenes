@@ -26,11 +26,12 @@ public class plataformaMarina extends InstalacionesPetroliferas  implements Revi
     }
 
     @Override
-    public void calculoProduccionReal() {
+    public double calculoProduccionReal() {
     produccionReal=produccionDiaria+60-(distaciaCosta/6);
         if (produccionReal < 0){
             produccionReal=0;
         }
+        return produccionReal;
     }
     @Override
     public void mostrarResultado() {
