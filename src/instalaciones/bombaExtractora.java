@@ -17,6 +17,12 @@ public class bombaExtractora extends InstalacionesPetroliferas{
 
     // METODOS
 
+
+
+    public  String obtenerNombre(){
+        String tipo = getClass().getSimpleName().replaceAll("([a-z])([A-Z])", "$1 $2");
+        return  tipo;
+    }
     @Override
     public void PreparaInstalacio() {
         System.out.println("----------------------------------------------");
@@ -36,7 +42,7 @@ public class bombaExtractora extends InstalacionesPetroliferas{
     public void mostrarResultado() {
         System.out.println("----------------------------------------------");
         System.out.println("Nombre: "+nombre);
-        System.out.println("Tipo: " +getClass().getSimpleName());
+        System.out.println("Tipo: " +obtenerNombre());
         System.out.println("Ubicacion: "+ubicacion);
         System.out.println("Barriles: "+produccionReal);
         System.out.println("----------------------------------------------");

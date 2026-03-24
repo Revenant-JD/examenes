@@ -17,6 +17,12 @@ public class torrePerforacion extends InstalacionesPetroliferas  implements Revi
     }
 
     // METODOS
+
+
+    public  String obtenerNombre(){
+        String tipo = getClass().getSimpleName().replaceAll("([a-z])([A-Z])", "$1 $2");
+        return  tipo;
+    }
     @Override
     public double calculoProduccionReal() {
        produccionReal= produccionDiaria + (profundidadPerforacion/90)+(Math.sqrt(profundidadPerforacion));
@@ -37,7 +43,7 @@ public class torrePerforacion extends InstalacionesPetroliferas  implements Revi
     public void mostrarResultado() {
         System.out.println("----------------------------------------------");
         System.out.println("Nombre: "+nombre);
-        System.out.println("Tipo: " +getClass().getSimpleName());
+        System.out.println("Tipo: " +obtenerNombre());
         System.out.println("Ubicacion: "+ubicacion);
         System.out.println("Barriles: " +produccionReal);
         System.out.println("----------------------------------------------");
