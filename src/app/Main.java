@@ -11,13 +11,23 @@ import java.util.ArrayList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ArrayList<InstalacionesPetroliferas> lista = new ArrayList<>();
-InstalacionesPetroliferas[] instalaciones ;
-InstalacionesPetroliferas i1 = new torrePerforacion("Torre Norte","Texas",20,200);
-InstalacionesPetroliferas i2 = new plataformaMarina("Plataforma Atlantico","Texas",20,200);
-InstalacionesPetroliferas i3 = new bombaExtractora("Bomba Yacimiento-12","Texas",20,200);
-InstalacionesPetroliferas i4 = new torrePerforacion("Torre Delta","Texas",20,200);
+       /* ArrayList<InstalacionesPetroliferas> lista = new ArrayList<>();*/
+        InstalacionesPetroliferas [] instalaciones = new  InstalacionesPetroliferas[4];
 
+        instalaciones [0] = new torrePerforacion("Torre Norte","Texas",20,200);
+        instalaciones [1] = new plataformaMarina("Plataforma Atlantico","Texas",20,200);
+        instalaciones [2] = new bombaExtractora("Bomba Yacimiento-12","Texas",20,200);
+        instalaciones [3] = new torrePerforacion("Torre Delta","Texas",20,200);
+        double suma=0;
+        for (int i = 0; i <instalaciones.length ; i++) {
+             suma += instalaciones[i].calculoProduccionReal();
+        }
+        for (int i = 0; i < instalaciones.length; i++) {
+            instalaciones [i].ejecutarProceso();
+
+        }
+        System.out.println(+suma);
+        /*
 lista.add(i1);
 lista.add(i2);
 lista.add(i3);
@@ -28,7 +38,7 @@ i.ejecutarProceso();
     suma +=  i.calculoProduccionReal();
 }
         System.out.println("Total = " +suma);
-
+*/
 
 }
 

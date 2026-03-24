@@ -26,7 +26,7 @@ public abstract class InstalacionesPetroliferas {
         System.out.println("RESULTADO POR DEFECTO");
     }
 
-     public  void ejecutarProceso(){
+     public final void ejecutarProceso(){
             PreparaInstalacio();
             calculoProduccionReal();
             mostrarResultado();
